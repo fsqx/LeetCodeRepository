@@ -1,0 +1,2 @@
+# LeetCodeRepository
+For recording leetcode
