@@ -17,18 +17,18 @@ public:
     {
         auto length = s.length();
         vector<int> src_numbers(length, 0);
-        int result;
+        int result = 0;
 
         // 如果左值小于右值就减去左值，如果左值大于右值就加上右值。
         for(int i = 0; i < length; i++)
         {
             if(i < length - 1 && getIntFromChar(*(s.c_str() + i)) < getIntFromChar(*(s.c_str() + i + 1)))
             {
-                result += getIntFromChar(*(s.c_str() + i));
+                result -= getIntFromChar(*(s.c_str() + i));
             }
             else
             {
-                result -= getIntFromChar(*(s.c_str() + i));
+                result += getIntFromChar(*(s.c_str() + i));
             }
         }
 
