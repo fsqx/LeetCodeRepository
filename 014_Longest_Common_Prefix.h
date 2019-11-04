@@ -1,3 +1,4 @@
+/* 注意不要越界，处理各种异常情况即可*/
 #pragma once
 #include <iostream>
 #include <string>
