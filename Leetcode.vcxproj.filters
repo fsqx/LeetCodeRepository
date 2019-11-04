@@ -15,10 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="001_two_sum.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="007_number_flip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="009_number_of_tracts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="013_roman_to_interger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="014_Longest_Common_Prefix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="021_merge_two_sorted_lists.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="001.two_sum.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
