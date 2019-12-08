@@ -9,38 +9,51 @@ using namespace std;
 class Solution
 {
 public:
+    Solution()
+    {
+        m_mapForString.insert(pair<char, char>(']', '['));
+        m_mapForString.insert(pair<char, char>(')', '('));
+        m_mapForString.insert(pair<char, char>('}', '{'));
+    }
     bool isValid(string str)
     {
-        m_mapForString.insert('[', ']');
-        m_mapForString.insert('(', ')');
-        m_mapForString.insert('{', '}');
         stack<char> m_charStack;
         const char *c = str.c_str();
 
         while((*c) != 0)
         {
-            if(m_mapForString.find((*c)) != m_mapForString.end())
+            auto iter = m_mapForString.find(*c);
+
+            if(iter == m_mapForString.end())
             {
-                m_charStack.push((*c));
+                m_charStack.push(*c);
             }
             else
             {
-                char tmp_c = m_charStack.top();
-                m_charStack.pop();
-
-                if(m_mapForString.find(tmp_c)->second == (*c))
+                if(!m_charStack.empty() && iter->second == m_charStack.top())
                 {
-                    continue;
+                    m_charStack.pop();
                 }
                 else
                 {
                     return false;
                 }
             }
+
+            c++;
         }
 
-        return true;
+        if(m_charStack.empty())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+
+
 private:
     map<char, char> m_mapForString;
-}£»
+};
