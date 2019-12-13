@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 #include <cstdlib>
 #include <vector>
@@ -15,7 +15,7 @@ public:
 
 int Solution::removeDuplicates(vector<int>& nums)
 {
-    // ¿ØÊý×é
+    // ç©ºæ•°ç»„
     if(nums.size() == 0)
     {
         return 0;
