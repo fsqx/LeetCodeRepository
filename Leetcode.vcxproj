@@ -121,7 +121,9 @@
     <ClInclude Include="009_number_of_tracts.h" />
     <ClInclude Include="013_roman_to_interger.h" />
     <ClInclude Include="014_Longest_Common_Prefix.h" />
+    <ClInclude Include="020_valid_parentheses.h" />
     <ClInclude Include="021_merge_two_sorted_lists.h" />
+    <ClInclude Include="026_remove_dumplicates_from_sorted_Array.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

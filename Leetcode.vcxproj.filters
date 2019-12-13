@@ -33,6 +33,12 @@
     <ClInclude Include="021_merge_two_sorted_lists.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="020_valid_parentheses.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="026_remove_dumplicates_from_sorted_Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
