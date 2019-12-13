@@ -29,7 +29,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -124,6 +124,8 @@
     <ClInclude Include="020_valid_parentheses.h" />
     <ClInclude Include="021_merge_two_sorted_lists.h" />
     <ClInclude Include="026_remove_dumplicates_from_sorted_Array.h" />
+    <ClInclude Include="027_remove_element.h" />
+    <ClInclude Include="028_myStrstr.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

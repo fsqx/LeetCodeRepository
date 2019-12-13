@@ -39,6 +39,12 @@
     <ClInclude Include="026_remove_dumplicates_from_sorted_Array.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="027_remove_element.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="028_myStrstr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
