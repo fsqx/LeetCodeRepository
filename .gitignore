@@ -1,2 +1,6 @@
 /Debug/
 /.vs/
+simu_dll.dll
+simu_dll.lib
+testDLL.cpp
+testDLL.h
