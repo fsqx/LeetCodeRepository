@@ -119,6 +119,7 @@
     <ClInclude Include="001_two_sum.h" />
     <ClInclude Include="002_add_two_numbers.h" />
     <ClInclude Include="003_longest_substr.h" />
+    <ClInclude Include="005_Longest_palindromic_sumstring.h" />
     <ClInclude Include="007_number_flip.h" />
     <ClInclude Include="008_string_to_integer.h" />
     <ClInclude Include="009_number_of_tracts.h" />

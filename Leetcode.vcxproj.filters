@@ -57,6 +57,9 @@
     <ClInclude Include="008_string_to_integer.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="005_Longest_palindromic_sumstring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
