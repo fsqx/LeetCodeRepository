@@ -1,3 +1,8 @@
+/**
+ * 多线程题目：按顺序执行三个函数
+ * 使用条件变量控制线程执行的顺序，生产者消费者一类的问题类似。
+ */
+
 #include <mutex>
 #include <condition_variable>
 
@@ -8,7 +13,7 @@ class Foo
 public:
     Foo()
     {
-        m_isFirstThreadComplete = true;
+        m_isFirstThreadComplete = false;
         m_isSecondThreadComplete = false;
     }
 
