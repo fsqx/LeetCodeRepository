@@ -2,15 +2,21 @@
 #include <string>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    string countAndSay(int n) 
+    string countAndSay(int n)
     {
+        if (n == 1)
+        {
+            return string("1");
+        }
         string rstNumString = "1";
-        for(int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
         {
             rstNumString = countAndSayStr(rstNumString);
         }
+        return rstNumString;
     }
 
     string countAndSayStr(string &numString)
@@ -19,12 +25,12 @@ public:
         char tmpStr[100];
         int strIndex = 0;
         // 计算字符个数
-        int count = 1;
-        char tmpChar = numString.at(1);
+        int count = 0;
+        char tmpChar = ' ';
 
-        for(int i = 1; i < numString.size(); i++)
+        for (int i = 0; i < numString.size(); i++)
         {
-            if(numString.at(i) != tmpChar)
+            if (numString.at(i) != tmpChar)
             {
                 tmpStr[strIndex] = count;
                 strIndex++;
@@ -47,8 +53,7 @@ public:
 int main()
 {
     Solution solution;
-    cout << solution.countAndSay(1) << endl;
-
+    cout << solution.countAndSay(2) << endl;
     system("pause");
     return 0;
 }
