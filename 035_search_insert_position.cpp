@@ -28,5 +28,6 @@ int main()
     Solution solution;
     std::cout << solution.searchInsert(nums, 2) << std::endl;
     std::cout << "Hello world" << std::endl;
+    system("pause");
     return 0;
 }
