@@ -1,5 +1,5 @@
-/Debug/
-/.vs/
+/Debug/*
+/.vs/*
 simu_dll.dll
 simu_dll.lib
 testDLL.cpp
@@ -7,5 +7,3 @@ testDLL.h
 *.json
 *.plist
 *.out
-035_search_insert_position
-035.dSYM/Contents/Resources/DWARF/035
