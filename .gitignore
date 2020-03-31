@@ -7,3 +7,4 @@ testDLL.h
 *.json
 *.plist
 *.out
+*.exe
