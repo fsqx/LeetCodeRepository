@@ -1,35 +1,50 @@
 #include <iostream>
 #include <string>
+#include <string.h>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    string countAndSay(int n) 
+    string countAndSay(int n)
     {
+        if (n < 1)
+        {
+            return string("");
+        }
+        if (n == 1)
+        {
+            return string("1");
+        }
+
         string rstNumString = "1";
-        for(int i = 0; i < n; i++)
+        for (int i = 1; i < n; i++)
         {
             rstNumString = countAndSayStr(rstNumString);
         }
+        return rstNumString;
     }
 
     string countAndSayStr(string &numString)
     {
         // 控制生成新字符串
-        char tmpStr[100];
+        string tmpStr;
         int strIndex = 0;
         // 计算字符个数
-        int count = 1;
-        char tmpChar = numString.at(1);
+        int count = 0;
+        char tmpChar = ' ';
 
-        for(int i = 1; i < numString.size(); i++)
+        for (int i = 0; i < numString.size(); i++)
         {
-            if(numString.at(i) != tmpChar)
+            if (numString.at(i) != tmpChar)
             {
-                tmpStr[strIndex] = count;
-                strIndex++;
-                tmpStr[strIndex] = tmpChar;
-                strIndex++;
+                if (tmpChar <= '9' && tmpChar >= '0')
+                {
+                    tmpStr += (count + '0');
+                    strIndex++;
+                    tmpStr += tmpChar;
+                    strIndex++;
+                }
 
                 count = 1;
                 tmpChar = numString.at(i);
@@ -37,6 +52,14 @@ public:
             else
             {
                 count++;
+            }
+
+            if (i == numString.size() - 1)
+            {
+                tmpStr += count + '0';
+                strIndex++;
+                tmpStr += tmpChar;
+                strIndex++;
             }
         }
         tmpStr[strIndex] = '\0';
@@ -47,7 +70,7 @@ public:
 int main()
 {
     Solution solution;
-    cout << solution.countAndSay(1) << endl;
+    cout << solution.countAndSay(6) << endl;
 
     system("pause");
     return 0;
