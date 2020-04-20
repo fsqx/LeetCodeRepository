@@ -1,7 +1,4 @@
 #include "mainHead.h"
-#include "glog/logging.h"
-#define GOOGLE_GLOG_DLL_DECL
-
 
 int main(int argc, char *argv[])
 {
@@ -14,12 +11,9 @@ int main(int argc, char *argv[])
     Solution solution;
     cout << solution.removeDuplicates(nums) << endl;
 #endif
-    google::InitGoogleLogging(argv[0]);
-    //google::SetLogDestination(google::GLOG_INFO, "d:\\Logs\\INFO_");
-    string ss = "abacbacabccbb";
-    Solution solution;
-    solution.longestPalindrome(ss);
+    vector<int> nums = {5};
+    Solution object;
+    cout << object.search(nums, -2) << endl;
     system("pause");
-    google::ShutdownGoogleLogging();
     return 0;
 }
