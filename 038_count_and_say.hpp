@@ -7,15 +7,18 @@ class Solution
 public:
     string countAndSay(int n)
     {
-        if (n == 1)
+        if(n == 1)
         {
             return string("1");
         }
+
         string rstNumString = "1";
-        for (int i = 0; i < n; i++)
+
+        for(int i = 0; i < n; i++)
         {
             rstNumString = countAndSayStr(rstNumString);
         }
+
         return rstNumString;
     }
 
@@ -28,15 +31,14 @@ public:
         int count = 0;
         char tmpChar = ' ';
 
-        for (int i = 0; i < numString.size(); i++)
+        for(int i = 0; i < numString.size(); i++)
         {
-            if (numString.at(i) != tmpChar)
+            if(numString.at(i) != tmpChar)
             {
                 tmpStr[strIndex] = count;
                 strIndex++;
                 tmpStr[strIndex] = tmpChar;
                 strIndex++;
-
                 count = 1;
                 tmpChar = numString.at(i);
             }
@@ -45,11 +47,13 @@ public:
                 count++;
             }
         }
+
         tmpStr[strIndex] = '\0';
         return string(tmpStr);
     }
 };
 
+/*
 int main()
 {
     Solution solution;
@@ -57,3 +61,4 @@ int main()
     system("pause");
     return 0;
 }
+*/
