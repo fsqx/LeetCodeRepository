@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <set>
 
 using namespace std;
 
@@ -11,43 +12,153 @@ extern int binarySearch(const vector<int> &nums, int targetNum, int left, int ri
 class Solution
 {
 public:
-    vector<vector<int>> threeSum(vector<int>& nums)
+    vector<vector<int> > threeSum(vector<int>& nums)
     {
-        vector<vector<int> > vectors = groupVectors(nums);
-        sort(vectors.at(0).begin(), vectors.at(0).end(), [](int x, int y)
+        //双指针
+        if(nums.size() < 3)
+        {
+            return vector<vector<int> >();
+        }
+
+        sort(nums.begin(), nums.end(), [](int x, int y)
         {
             return x < y;
         });
-        sort(vectors.at(1).begin(), vectors.at(1).end(), [](int x, int y)
-        {
-            return x < y;
-        });
-        //
-    }
+        vector<vector<int> > rstVector;
+        int rstLeft = 0;
+        int rstRight = nums.size() - 1;
 
-    vector<vector<int> > groupVectors(vector<int> &nums)
-    {
-        vector<int>::iterator iter = nums.begin();
-        vector<vector<int> > vectors;
-
-        // 将原数组按大于0 小于0 等于0 分成三组
-        for(; iter != nums.end(); iter++)
+        for(int i = 0; i < nums.size() - 2; i++)
         {
-            if(*iter > 0)
+            if(nums.at(i) > 0)
             {
-                vectors[0].push_back(*iter);
+                break;
             }
-            else if(*iter < 0)
+
+            int left = i + 1;
+            int right = rstRight;
+
+            while(left < right)
             {
-                vectors[1].push_back(*iter);
-            }
-            else
-            {
-                vectors[2].push_back(*iter);
+                if(nums.at(i) + nums.at(left) + nums.at(right) == 0)
+                {
+                    rstVector.push_back(vector<int>({ nums.at(i), nums.at(left), nums.at(right) }));
+
+                    while(left < right && nums.at(left) == nums.at(left + 1))
+                    {
+                        left++;
+                    }
+
+                    while(left < right && nums.at(right) == nums.at(right - 1))
+                    {
+                        right--;
+                    }
+
+                    left++;
+                    right--;
+                }
+                else
+                {
+                    if(nums.at(left) + nums.at(right) + nums.at(i) > 0)
+                    {
+                        right--;
+                    }
+                    else if(nums.at(left) + nums.at(right) + nums.at(i) < 0)
+                    {
+                        left++;
+                    }
+                }
             }
         }
 
-        return vectors;
+        set<vector<int> > s(rstVector.begin(), rstVector.end());
+        rstVector.assign(s.begin(), s.end());
+        return rstVector;
+#if 0
+
+        // 暴力算法。时间太长。
+        if(nums.size() < 3)
+        {
+            return vector<vector<int> >();
+        }
+
+        sort(nums.begin(), nums.end(), [](int x, int y)
+        {
+            return x < y;
+        });
+        vector<vector<int> > rstVector;
+
+        for(int i = 0; i < nums.size(); i++)
+        {
+            if(nums.at(i) > 0)
+            {
+                break;
+            }
+
+            for(int k = i + 1; k < nums.size(); k++)
+            {
+                int addNum;
+
+                if(nums.at(i) == 0 && nums.at(k) == 0)
+                {
+                    if(search(nums, 0, k + 1, nums.size() - 1) != -1)
+                    {
+                        rstVector.push_back(vector<int>({ 0, 0, 0 }));
+                    }
+
+                    break;
+                }
+                else
+                {
+                    addNum = nums.at(i) + nums.at(k);
+                }
+
+                if(addNum >= 0)
+                {
+                    break;
+                }
+
+                int rst = search(nums, -addNum, k + 1, nums.size() - 1);
+
+                if(rst == -1)
+                {
+                    continue;
+                }
+                else
+                {
+                    //rstVector.push_back(vector<int>({ nums.at(i), nums.at(k), nums.at(rst) }));
+                }
+            }
+        }
+
+        set<vector<int> > s(rstVector.begin(), rstVector.end());
+        rstVector.assign(s.begin(), s.end());
+        return rstVector;
+#endif
+    }
+
+    // 普通二分法查找
+    int search(vector<int>& nums, int target, int left, int right)
+    {
+        while(left <= right)
+        {
+            int mid = (right - left) / 2 + left;
+
+            if(nums.at(mid) > target)
+            {
+                right = mid - 1;
+            }
+            else if(nums.at(mid) < target)
+            {
+                left = mid + 1;
+            }
+            else
+            {
+                return mid;
+            }
+        }
+
+        return -1;
     }
 };
 
