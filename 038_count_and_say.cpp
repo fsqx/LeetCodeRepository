@@ -63,9 +63,9 @@ public:
 };
 
 int main()
-{
+{          
     Solution solution;
-    cout << solution.countAndSay(2) << endl;
+    cout << solution.countAndSay(20) << endl;
     system("pause");
     return 0;
 }
