@@ -9,10 +9,6 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="资源文件">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="001_two_sum.h">
@@ -70,6 +66,21 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="015_three_sum.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="006_zigzag_conversion.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="01_08_zero_matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="019_remove_nth_node_from_end_of_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="02_01_remove_duplicate_node.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="521_longest_uncommon_subsequence.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
