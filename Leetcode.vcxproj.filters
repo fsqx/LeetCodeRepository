@@ -83,6 +83,9 @@
     <ClInclude Include="521_longest_uncommon_subsequence.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="010_regular_expression_matching.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
