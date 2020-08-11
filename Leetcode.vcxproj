@@ -133,6 +133,7 @@
     <ClInclude Include="007_number_flip.h" />
     <ClInclude Include="008_string_to_integer.h" />
     <ClInclude Include="009_number_of_tracts.h" />
+    <ClInclude Include="010_regular_expression_matching.h" />
     <ClInclude Include="013_roman_to_interger.h" />
     <ClInclude Include="014_Longest_Common_Prefix.h" />
     <ClInclude Include="015_three_sum.hpp" />
