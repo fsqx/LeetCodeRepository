@@ -19,10 +19,11 @@ int main(int argc, char *argv[])
     //    tmpHead = tmp;
     //}
     //vector<vector<int> > matrix = { {1, 1, 1}, {1, 0, 1}, {1, 1, 1} };
-    Solution solution;
-    string a = "abcdefg";
-    string b = "jiskdi";
-    solution.findLUSlength(a, b);
+    //Solution solution;
+    //string a = "abcdefg";
+    //string b = "jiskdi";
+    //solution.findLUSlength(a, b);
+    std::cout << "hello world!" << std::endl;
     system("pause");
     return 0;
 }
