@@ -83,6 +83,7 @@
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <OpenMPSupport>true</OpenMPSupport>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
@@ -153,7 +154,14 @@
     <ClInclude Include="069_sqrt.h" />
     <ClInclude Include="070_climbing_stairs.h" />
     <ClInclude Include="088_merge_sorted_array.h" />
+    <ClInclude Include="094_binary_tree_lnorder_traversal.h" />
+    <ClInclude Include="100_same_tree.h" />
+    <ClInclude Include="101_symmetric_tree.h" />
+    <ClInclude Include="104_maximum_depth_of_binary_tree.h" />
+    <ClInclude Include="108_convert_sorted_array_to_binary_search_tree.h" />
+    <ClInclude Include="108_convert_sorted_array_to_binary_search_tree_.h" />
     <ClInclude Include="1116_print_zero_even_odd.h" />
+    <ClInclude Include="1405_longest_happy_string.h" />
     <ClInclude Include="1725_number_of_rectangles_that_can_form_the_largest_square.h" />
     <ClInclude Include="1748_sum_of_unique_elements.h" />
     <ClInclude Include="521_longest_uncommon_subsequence.h" />
