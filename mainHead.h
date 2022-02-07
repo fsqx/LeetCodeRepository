@@ -22,8 +22,17 @@
 //#include "021_merge_two_sorted_lists.h"
 //#include "026_remove_dumplicates_from_sorted_Array.h"
 //#include "027_remove_element.h"
-#include "521_longest_uncommon_subsequence.h"
+//#include "521_longest_uncommon_subsequence.h"
+//#include "053_maximum_subarray.h"
+//#include "058_length_of_last_word.h"
+//#include "066_plus_one.h"
+//#include "067_add_binary.h"
+//#include "069_sqrt.h"
+//#include "070_climbing_stairs.h"
+#include "088_merge_sorted_array.h"
 //#include "704_birnary_search.h"
+//#include "1725_number_of_rectangles_that_can_form_the_largest_square.h"
+//#include "1748_sum_of_unique_elements.h"
 
 
 /// ---------------------√Ê ‘Ã‚---------------------

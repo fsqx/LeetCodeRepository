@@ -147,9 +147,18 @@
     <ClInclude Include="02_01_remove_duplicate_node.h" />
     <ClInclude Include="035_search_insert_position.hpp" />
     <ClInclude Include="038_count_and_say.hpp" />
+    <ClInclude Include="053_maximum_subarray.h" />
+    <ClInclude Include="058_length_of_last_word.h" />
+    <ClInclude Include="067_add_binary.h" />
+    <ClInclude Include="069_sqrt.h" />
+    <ClInclude Include="070_climbing_stairs.h" />
+    <ClInclude Include="088_merge_sorted_array.h" />
     <ClInclude Include="1116_print_zero_even_odd.h" />
+    <ClInclude Include="1725_number_of_rectangles_that_can_form_the_largest_square.h" />
+    <ClInclude Include="1748_sum_of_unique_elements.h" />
     <ClInclude Include="521_longest_uncommon_subsequence.h" />
     <ClInclude Include="mainHead.h" />
+    <ClInclude Include="066_plus_one.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="704_birnary_search.h" />
