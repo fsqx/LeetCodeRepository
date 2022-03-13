@@ -20,9 +20,9 @@ int main(int argc, char *argv[])
     //}
     //vector<vector<int> > matrix = { {1, 1, 1}, {1, 0, 1}, {1, 1, 1} };
     Solution solution;
-    string a = "abcdefg";
-    string b = "jiskdi";
-    solution.findLUSlength(a, b);
+    //cout << solution.intToRoman(1994) << endl;
+    vector<int> number{ 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+    cout << "max area: " << solution.maxArea(number) << endl;
     system("pause");
     return 0;
 }

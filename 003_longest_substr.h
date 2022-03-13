@@ -12,29 +12,32 @@ public:
 
 int Solution::lengthOfLongestSubstring(string s)
 {
-    unordered_map<char, int> slideWindow;
+    string newStr = "";
     int leftIndex = 0;
     int rightIndex = 0;
-    int maxLength = 0;
+    int maxSubLength = 0;
 
-    while(rightIndex < s.size())
+    while(rightIndex < s.length())
     {
-        if(slideWindow.find(s[rightIndex]) != slideWindow.end())
+        size_t newStringFindIndex = newStr.find(s[rightIndex]);
+
+        if(newStringFindIndex == newStr.npos)
         {
-            slideWindow.erase(s[leftIndex]);
-            leftIndex++;
+            newStr += s[rightIndex];
+            rightIndex++;
+
+            if(maxSubLength < newStr.length())
+            {
+                maxSubLength = newStr.length();
+            }
         }
         else
         {
-            slideWindow.insert(pair<char, int>(s[rightIndex], rightIndex));
-            rightIndex++;
-        }
-
-        if(slideWindow.size() > maxLength)
-        {
-            maxLength = slideWindow.size();
+            leftIndex = newStringFindIndex + 1 + leftIndex;
+            rightIndex = leftIndex;
+            newStr.clear();
         }
     }
 
-    return maxLength;
+    return maxSubLength;
 }
