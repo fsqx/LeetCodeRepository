@@ -8,3 +8,4 @@ testDLL.h
 *.plist
 *.out
 *.exe
+.idea
