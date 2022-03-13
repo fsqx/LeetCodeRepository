@@ -1,5 +1,7 @@
 /Debug/*
 /.vs/*
+/x64/*
+/Debug/*
 simu_dll.dll
 simu_dll.lib
 testDLL.cpp
